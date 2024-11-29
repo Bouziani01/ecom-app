@@ -17,9 +17,11 @@ public class InventoryServiceApplication {
         SpringApplication.run(InventoryServiceApplication.class, args);
 
     }
+
     @Bean
-    CommandLineRunner start(ProductRepository productRepository, RepositoryRestConfiguration restConfiguration){
-        return args -> { restConfiguration.exposeIdsFor(Product.class);
+    CommandLineRunner start(ProductRepository productRepository, RepositoryRestConfiguration restConfiguration) {
+        return args -> {
+            restConfiguration.exposeIdsFor(Product.class);
             productRepository.saveAll(
                     List.of(
                             Product.builder().name("Computer").quantity(12).price(1200).build(),

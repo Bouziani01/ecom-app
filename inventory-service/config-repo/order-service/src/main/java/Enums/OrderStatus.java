@@ -1,2 +1,5 @@
-package Enums;public class OrderStatus {
+package Enums;
+
+public enum OrderStatus {
+    CREATED, PENDING, DELIVERED, CANCELED
 }

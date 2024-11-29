@@ -1,4 +1,6 @@
-package entities.Model;
+package Model;
+
+import lombok.Data;
 
 @Data
 public class Product {
